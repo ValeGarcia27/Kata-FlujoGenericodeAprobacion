@@ -1,0 +1,57 @@
+/* Estilo base para el cuerpo */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  color: #333;
+}
+
+/* Etiquetas de formulario */
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 4px;
+  margin-top: 16px;
+}
+
+/* Inputs, selects y textareas */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 4px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+/* Botón principal */
+button {
+  background-color: #0057a3;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #003f7f;
+}
+
+/* Títulos */
+h1, h2 {
+  margin-top: 0;
+}
+
+/* Contenedor general */
+main {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+}

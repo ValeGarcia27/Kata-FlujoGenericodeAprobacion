@@ -1,0 +1,50 @@
+.bandeja-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.solicitud-card {
+  border: 1px solid #ccc;
+  border-left: 5px solid #0070f3;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.solicitud-card textarea {
+  width: 100%;
+  min-height: 60px;
+  margin-top: 0.5rem;
+  resize: vertical;
+}
+
+.acciones {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-aprobar {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.btn-rechazar {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.btn-historial {
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+}

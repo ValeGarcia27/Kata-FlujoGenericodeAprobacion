@@ -1,0 +1,48 @@
+/* styles/SolicitudForm.css */
+
+form.solicitud-form {
+  max-width: 600px;
+  margin: auto;
+}
+
+.solicitud-form h2 {
+  margin-bottom: 1rem;
+}
+
+.solicitud-form label {
+  font-weight: bold;
+  display: block;
+  margin-top: 1rem;
+}
+
+.solicitud-form input,
+.solicitud-form textarea,
+.solicitud-form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 4px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.solicitud-form button {
+  background-color: #0057a3;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.solicitud-form button:hover {
+  background-color: #003f7f;
+}
+
+.solicitud-form p {
+  margin-top: 1rem;
+  font-weight: bold;
+}
