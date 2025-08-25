@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import '@/styles/HistorialPorSolicitud.css';
+import Link from 'next/link';
 
 export default function HistorialGeneral() {
   const [solicitudes, setSolicitudes] = useState([]);
@@ -27,8 +28,8 @@ export default function HistorialGeneral() {
   };
 
   return (
-    <main className="historial-container">
-      <h1>📋 Historial General de Solicitudes</h1>
+    <div className="historial-container">
+      <h1>Historial General de Solicitudes</h1>
       {solicitudes.length === 0 ? (
         <p>No hay solicitudes registradas.</p>
       ) : (
@@ -54,18 +55,29 @@ export default function HistorialGeneral() {
                 <td>{s.responsable}</td>
                 <td>{s.estado}</td>
                 <td>{formatearFecha(s.fecha_creacion)}</td>
-                <td>{s.ultima_fecha ? formatearFecha(s.ultima_fecha) : '—'}</td>
+                <td>{formatearFecha(s.ultima_fecha)}</td>
                 <td>{s.ultimo_comentario || '—'}</td>
               </tr>
             ))}
           </tbody>
         </table>
-      )}
-    </main>
+       )}
+
+       <Link href="/aprobador">
+          <button className="boton-volver">
+            <img src="https://png.pngtree.com/png-clipart/20190705/original/pngtree-arrow-left-vector-icon-png-image_4279219.jpg" alt="Volver" />
+          </button>
+        </Link>
+    </div>
   );
 }
 
-function formatearFecha(fecha) {
-  const f = new Date(fecha);
-  return `${f.toLocaleDateString()} ${f.toLocaleTimeString()}`;
+export function formatearFecha(fechaString) {
+  if (!fechaString) return "—";
+
+  const match = fechaString.match(/^(\d{4}-\d{2}-\d{2})T(\d{2}:\d{2}:\d{2})/);
+  if (!match) return fechaString; 
+
+  const [, fecha, hora] = match;
+  return `${fecha} ${hora}`;
 }

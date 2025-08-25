@@ -2,10 +2,6 @@ import { NextResponse } from 'next/server';
 import { poolPromise } from '@/lib/db';
 import { v4 as uuidv4 } from 'uuid';
 
-/**
- * POST /api/solicitudes
- * Crea una nueva solicitud
- */
 export async function POST(request) {
   try {
     const body = await request.json();
@@ -38,10 +34,6 @@ export async function POST(request) {
   }
 }
 
-/**
- * GET /api/solicitudes
- * Devuelve todas las solicitudes con su última acción y comentario
- */
 export async function GET() {
   try {
     const pool = await poolPromise;
@@ -51,7 +43,7 @@ export async function GET() {
         s.*, 
         s.fecha_accion AS ultima_fecha,
         h.comentario AS ultimo_comentario
-        --, h.usuario AS ultimo_usuario -- (si deseas incluir el aprobador también)
+        --, h.usuario AS ultimo_usuario
       FROM solicitudes s
       OUTER APPLY (
         SELECT TOP 1 comentario, usuario
@@ -70,10 +62,6 @@ export async function GET() {
   }
 }
 
-/**
- * PATCH /api/solicitudes
- * Actualiza el estado de una solicitud, registra comentario y marca la fecha de acción
- */
 export async function PATCH(request) {
   try {
     const { uuid, estado, comentario, usuario = 'responsable_demo' } = await request.json();

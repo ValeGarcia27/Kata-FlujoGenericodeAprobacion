@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import Link from 'next/link';
 import '@/styles/BandejaPendientes.css';
 
 export default function BandejaPendientes() {
@@ -71,14 +70,14 @@ export default function BandejaPendientes() {
                 className="btn-aprobar"
                 disabled={loading}
               >
-                ✅ Aprobar
+                Aprobar
               </button>
               <button
                 onClick={() => handleAccion(sol.uuid, 'rechazado')}
                 className="btn-rechazar"
                 disabled={loading}
               >
-                ❌ Rechazar
+                Rechazar
               </button>
             </div>
           </div>

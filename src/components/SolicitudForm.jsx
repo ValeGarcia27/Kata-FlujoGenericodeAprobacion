@@ -15,7 +15,7 @@ export default function SolicitudForm() {
 
   const [mensaje, setMensaje] = useState(null);
 
-  const tipos = ['despliegue', 'acceso', 'cambio técnico', 'otro'];
+  const tipos = ['Despliegue', 'Acceso', 'Cambio técnico'];
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -60,16 +60,16 @@ export default function SolicitudForm() {
       <h2>Crear Solicitud de Aprobación</h2>
 
       <label>Título:</label>
-      <input type="text" name="titulo" value={formData.titulo} onChange={handleChange} required />
+      <input type="text" name="titulo" placeholder='Ingresa tu Solicitud' value={formData.titulo} onChange={handleChange} required />
 
       <label>Descripción:</label>
-      <textarea name="descripcion" value={formData.descripcion} onChange={handleChange} required />
+      <textarea name="descripcion" placeholder='Descripcion para Creación de Microservicio...' value={formData.descripcion} onChange={handleChange} required />
 
       <label>Solicitante:</label>
-      <input type="text" name="solicitante" value={formData.solicitante} onChange={handleChange} required />
+      <input type="text" name="solicitante" placeholder='Ingresa el Solicitante' value={formData.solicitante} onChange={handleChange} required />
 
       <label>Responsable:</label>
-      <input type="text" name="responsable" value={formData.responsable} onChange={handleChange} required />
+      <input type="text" name="responsable" placeholder='Ingresa el Responsable' value={formData.responsable} onChange={handleChange} required />
 
       <label>Tipo de Solicitud:</label>
       <select name="tipo" value={formData.tipo} onChange={handleChange}>
@@ -78,8 +78,8 @@ export default function SolicitudForm() {
         ))}
       </select>
 
-      <button onClick={handleEnviarCorreo} type="submit">Enviar Solicitud</button>
-
+      <button className="enviarSolicitud" onClick={handleEnviarCorreo} type="submit">Enviar Solicitud</button>
+      
       {mensaje && <p>{mensaje}</p>}
     </form>
   );

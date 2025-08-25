@@ -1,81 +1,116 @@
-.container {
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+  font-family: "Roboto", sans-serif;
+}
+
+main{
+  max-height: 98vh;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+.container{
+  margin: 10px;
+  padding: 20px;
+  width: 100%;
+  height: 95vh;
+  display: flex;
+}
+
+.tituloForm{
+  font-size: 26px;
+}
+
+.form p{
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.izqFormulario{
+  margin: 0;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form{
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  background: linear-gradient(135deg, #3b82f6, #6366f1);
-  font-family: 'Segoe UI', sans-serif;
-  padding: 1rem;
+  flex-direction: column;
+  gap: 20px;
+  /* background-color: blue; */
+  width: 50%;
 }
 
-.form {
+.inputsContenedor{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* background-color: blueviolet; */
   width: 100%;
-  max-width: 400px;
-  background-color: #2a2a40;
-  padding: 2.5rem;
+}
+
+.inputsContenedor label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.inputsContenedor input {
   border-radius: 10px;
-  color: white;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-.title {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  text-align: center;
-}
-
-.subtitle {
-  font-size: 0.95rem;
-  margin-bottom: 2rem;
-  text-align: center;
-  color: #ccc;
-}
-
-.label {
-  font-size: 0.85rem;
-  margin-bottom: 0.3rem;
-  display: block;
-  color: #ddd;
-}
-
-.input {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  height: 40px;
   width: 100%;
-  padding: 0.6rem 0.8rem;
-  border: none;
-  border-radius: 6px;
-  margin-bottom: 1.2rem;
-  background-color: #3b3b4f;
-  color: white;
+  padding: 0 12px;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
 }
 
-.input:focus {
-  outline: 2px solid #6366f1;
-  background-color: #454564;
+.inputsContenedor input:focus {
+  outline: none;
+  border-color: #1E1E1E;
+  box-shadow: 0 0 6px rgba(30, 30, 30, 0.4);
+  background-color: #fff;
 }
 
-.error {
-  background-color: #f87171;
-  color: white;
-  padding: 0.5rem;
-  border-radius: 6px;
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
-  text-align: center;
+.inputsContenedor input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 12px;
 }
 
-.button {
+.derFormulario{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid black;
+}
+
+.derFormulario img{
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 20px;
+}
+
+.Button {
   width: 100%;
-  padding: 0.7rem;
-  background-color: #3b82f6;
-  border: none;
-  border-radius: 6px;
+  height: 40px;
+  background-color: #1E1E1E;
   color: white;
-  font-weight: bold;
+  border-radius: 10px;
+  border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease; 
+  margin-top: 10px;
 }
 
-.button:hover {
-  background-color: #2563eb;
+.Button:hover {
+  transform: translateY(-2px); 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
 }

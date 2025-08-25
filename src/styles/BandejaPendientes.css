@@ -1,50 +1,155 @@
-.bandeja-container {
+*{
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    font-family: "Roboto", sans-serif;
+}
+
+.titulo-pendientes{
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.39);
+}
+
+.bandeja-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+  padding: 24px;
+  color: #E0E0E0;
 }
 
 .solicitud-card {
-  border: 1px solid #ccc;
-  border-left: 5px solid #0070f3;
-  padding: 1rem;
-  border-radius: 10px;
-  background-color: #f9f9f9;
+  background: #1E1E1E;  
+  border: 1px solid #2A2A2A;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.5); 
+  transition: transform .15s ease, border-color .15s ease;
+}
+
+.solicitud-card:hover {
+  transform: translateY(-2px);
+  border-color: #3A3A3A;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.55);
+}
+
+.solicitud-card p {
+  margin-bottom: 8px;
+  line-height: 1.35;
+  font-size: 14px;
+}
+
+.solicitud-card p strong {
+  color: #ffffff;
 }
 
 .solicitud-card textarea {
   width: 100%;
-  min-height: 60px;
-  margin-top: 0.5rem;
+  min-height: 84px;
   resize: vertical;
+  background: #151515;  
+  color: #E0E0E0;
+  border: 1px solid #2F2F2F;
+  border-radius: 8px;
+  padding: 10px 12px;
+  outline: none;
+  transition: border-color .2s ease, box-shadow .2s ease;
+  margin-top: 6px;
+  font-size: 12px;
+}
+
+.solicitud-card textarea:focus {
+  border-color: #90CAF9;
+  box-shadow: 0 0 0 2px rgba(144,202,249,0.15);
 }
 
 .acciones {
-  margin-top: 1rem;
   display: flex;
-  gap: 0.5rem;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.acciones button {
+  flex: 1;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .2s ease, background-color .15s ease;
 }
 
 .btn-aprobar {
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  padding: 0.5rem;
-  border-radius: 5px;
+  background: #2E7D32;
+  color: #ffffff;
+}
+.btn-aprobar:hover {
+  background: #1B5E20;
+  transform: translateY(-2px);
 }
 
 .btn-rechazar {
-  background-color: #f44336;
-  color: white;
-  border: none;
-  padding: 0.5rem;
-  border-radius: 5px;
+  background: #C62828;
+  color: #ffffff;
+}
+.btn-rechazar:hover {
+  background: #8E0000;
+  transform: translateY(-2px);
 }
 
-.btn-historial {
-  background-color: #0070f3;
-  color: white;
+.acciones button:disabled,
+.solicitud-card textarea:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.bandeja-container > p {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #CFCFCF;
+  background: #1E1E1E;
+  border: 1px solid #2A2A2A;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+
+.boton-volver {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;  
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
   border: none;
-  padding: 0.5rem;
-  border-radius: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.boton-volver img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.boton-volver:hover {
+  background-color: #b71c1c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(211, 47, 47, 0.4);
+}
+
+@media (max-width: 400px) {
+  .acciones { flex-direction: column; }
 }

@@ -28,33 +28,45 @@
     };
 
     return (
-        <div className={styles.container}>
-        <form onSubmit={handleLogin} className={styles.form}>
-            <h2 className={styles.title}>Bienvenido</h2>
-            <p className={styles.subtitle}>Ingresa</p>
+        <div className='container'>
+            <div className='izqFormulario'>
+                <form onSubmit={handleLogin} className='form'>
+                    <h2 className='tituloForm'>Bienvenido</h2>
+                    <p>Ingresa tus credenciales para Inicio de Sesión</p>
 
-            {error && <div className={styles.error}>{error}</div>}
+                    {error && <div className={styles.error}>{error}</div>}
 
-            <label className={styles.label}>Usuario</label>
-            <input
-            type="text"
-            value={usuario}
-            onChange={(e) => setUsuario(e.target.value)}
-            className={styles.input}
-            required
-            />
+                    <div className='inputsContenedor'>
+                        <label className='Usuario'>Usuario</label>
+                        <input
+                        type="text"
+                        value={usuario}
+                        placeholder="Example@email.com"
+                        onChange={(e) => setUsuario(e.target.value)}
+                        className='inputs'
+                        required
+                        />
+                    </div>
 
-            <label className={styles.label}>Contraseña</label>
-            <input
-            type="password"
-            value={contrasena}
-            onChange={(e) => setContrasena(e.target.value)}
-            className={styles.input}
-            required
-            />
+                    <div className='inputsContenedor'>
+                        <label className='Password'>Contraseña</label>
+                        <input
+                        type="password"
+                        placeholder="Ingrese su contraseña"
+                        value={contrasena}
+                        onChange={(e) => setContrasena(e.target.value)}
+                        className='inputs'
+                        required
+                        />
+                    </div>
 
-            <button type="submit" className={styles.button}>Login</button>
-        </form>
+                    <button type="submit" className='Button'>Login</button>
+                </form>
+            </div>
+            
+            <div className='derFormulario'>
+                <img src="https://images.unsplash.com/photo-1580124917341-d318cbacc34f?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGFyayUyMGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D" alt="img"/>
+            </div>
         </div>
     );
     }

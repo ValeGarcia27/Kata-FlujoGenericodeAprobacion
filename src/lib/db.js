@@ -1,4 +1,3 @@
-// lib/db.js
 import sql from 'mssql';
 
 const config = {

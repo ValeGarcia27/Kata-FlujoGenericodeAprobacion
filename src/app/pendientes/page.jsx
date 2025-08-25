@@ -12,20 +12,16 @@ export default function PendientesPage() {
     }
   }, []);
 
-  const handleLogout = () => {
-    localStorage.removeItem('usuario');
-    localStorage.removeItem('rol');
-    router.push('/login');
-  };
-  
   return (
     <main style={{ padding: '2rem' }}>
-      <h1>📬 Bandeja de Pendientes</h1>
+      <h1 className='titulo-pendientes'>Bandeja de Pendientes</h1>
       <BandejaPendientes />
 
       <div style={{ marginTop: '2rem' }}>
-        <Link href="/">
-          <button className="boton-volver">🔙 Volver al formulario</button>
+        <Link href="/aprobador">
+          <button className="boton-volver">
+            <img src="https://png.pngtree.com/png-clipart/20190705/original/pngtree-arrow-left-vector-icon-png-image_4279219.jpg" alt="Volver" />
+          </button>
         </Link>
       </div>
     </main>

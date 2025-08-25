@@ -1,5 +1,5 @@
     import { NextResponse } from 'next/server';
-    import { poolPromise } from '@/lib/db'; // ✅ Asegúrate de tener esta línea
+    import { poolPromise } from '@/lib/db';
 
     export async function POST(request) {
     try {
