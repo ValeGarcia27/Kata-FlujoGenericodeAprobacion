@@ -1,0 +1,10 @@
+{
+  "/api/solicitudes/route": "/api/solicitudes",
+  "/_not-found/page": "/_not-found",
+  "/api/login/route": "/api/login",
+  "/aprobador/page": "/aprobador",
+  "/page": "/",
+  "/historial/page": "/historial",
+  "/solicitud/page": "/solicitud",
+  "/pendientes/page": "/pendientes"
+}
