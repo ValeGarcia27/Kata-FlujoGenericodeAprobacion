@@ -1,0 +1,119 @@
+/*!*****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./src/styles/page.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.home-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;  
+  gap: 60px;
+  height: 98vh;
+}
+
+.left{  
+  display: flex;
+  flex-direction: column;
+  margin-right: 50px;
+  gap: 25px;
+}
+
+.left span{
+  color: #5E9CB5;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  gap: -30px;
+}
+
+.left h1{
+  font-weight: 100;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.roles-container{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  gap: 20px;
+}
+
+.roles-container button {
+  width: 100%;
+  height: 40px;
+  background-color: #1E1E1E; 
+  color: #fff; 
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px; 
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15); 
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.roles-container button:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transform: translateY(-2px);
+}
+
+.roles-container button:active {
+  transform: translateY(0); 
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.roles-container button:disabled {
+  background-color: #BDBDBD;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+.cerrar-sesion-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #d32f2f;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.cerrar-sesion-btn img {
+  width: 40px;
+  height: 40px;
+}
+
+.cerrar-sesion-btn:hover {
+  background-color: #b71c1c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(211, 47, 47, 0.4);
+}
+
+.rigth{
+  display: flex;
+  max-width: 50%;
+  border-left: 1px solid rgba(0, 0, 0, 0.459);
+  padding-left: 120px;
+}
+
+.rigth img{
+  width: 350px;
+  border-radius: 20px;
+}

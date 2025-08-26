@@ -1,10 +1,9 @@
 {
-  "/api/solicitudes/route": "app/api/solicitudes/route.js",
-  "/_not-found/page": "app/_not-found/page.js",
   "/api/login/route": "app/api/login/route.js",
-  "/aprobador/page": "app/aprobador/page.js",
+  "/api/solicitudes/route": "app/api/solicitudes/route.js",
   "/page": "app/page.js",
+  "/aprobador/page": "app/aprobador/page.js",
+  "/pendientes/page": "app/pendientes/page.js",
   "/historial/page": "app/historial/page.js",
-  "/solicitud/page": "app/solicitud/page.js",
-  "/pendientes/page": "app/pendientes/page.js"
+  "/solicitud/page": "app/solicitud/page.js"
 }
